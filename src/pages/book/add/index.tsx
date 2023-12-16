@@ -1,3 +1,4 @@
+import BookForm from "@/components/BookForm";
 import styles from "@/styles/Home.module.css";
 import { Layout as AntdLayout } from "antd";
 import { Inter } from "next/font/google";
@@ -8,5 +9,5 @@ import Image from "next/image";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <>book add</>;
+  return <BookForm title="图书添加" />;
 }

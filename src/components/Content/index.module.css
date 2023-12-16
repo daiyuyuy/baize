@@ -1,0 +1,16 @@
+.content {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 20px 8px;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.operation{
+  margin-right: 10px;
+}
+

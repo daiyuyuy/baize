@@ -37,7 +37,7 @@ const items: MenuProps["items"] = [
 
     children: [
       { label: "分类列表", key: "/category" },
-      { label: "分类添加", key: "/catgory/add" },
+      { label: "分类添加", key: "/category/add" },
     ],
   },
   {
@@ -70,6 +70,9 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
     console.log(key);
     router.push(key);
   };
+
+  //路径pathname就是菜单列表的每个key值
+  const activeMenu = router.pathname;
   //会把_app.tsx中的  <Component {...pageProps} />当做子节点渲染出来
   return (
     <>
@@ -106,6 +109,7 @@ const Layout: React.FC<PropsWithChildren> = ({ children }) => {
                 defaultOpenKeys={["book"]}
                 style={{ height: "100%", borderRight: 0 }}
                 items={items}
+                selectedKeys={[activeMenu]}
                 onClick={handleMenuClick}
               />
             </Sider>
